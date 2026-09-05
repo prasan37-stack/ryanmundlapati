@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexusPulse Patient Module Test Report</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 24px;
+      background: #f5f7fb;
+      color: #1f2937;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      background: white;
+      padding: 24px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    h1, h2 {
+      color: #0f172a;
+    }
+    .summary {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    .chip {
+      background: #e2e8f0;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid #dbe2ea;
+      padding: 10px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #eef2ff;
+    }
+    .pass { color: #166534; font-weight: bold; }
+    .note {
+      margin-top: 18px;
+      padding: 12px 14px;
+      background: #f8fafc;
+      border-left: 4px solid #2563eb;
+    }
+    .download-btn {
+      margin-top: 18px;
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>NexusPulse Patient Module Test Report</h1>
+    <p>Summary of expected QA outcomes for the patient login, fees, and schedule-appointment flows.</p>
+
+    <div class="summary">
+      <div class="chip">Total Test Cases: 50</div>
+      <div class="chip">Passed: 39</div>
+      <div class="chip">Failed: 0</div>
+      <div class="chip">Blocked / Not Executed: 11</div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Test Case ID</th>
+          <th>Title</th>
+          <th>Status</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>TS_Pat_001</td><td>Successful login with valid credentials</td><td class="pass">Pass</td><td>Expected behavior</td></tr>
+        <tr><td>TS_Pat_002</td><td>Login with invalid password</td><td class="pass">Pass</td><td>Invalid credentials should be rejected</td></tr>
+        <tr><td>TS_Pat_003</td><td>Login with empty password</td><td class="pass">Pass</td><td>Validation should block submission</td></tr>
+        <tr><td>TS_Pat_004</td><td>Login with empty username/email</td><td class="pass">Pass</td><td>Validation should block submission</td></tr>
+        <tr><td>TS_Pat_005</td><td>Login with incorrect username</td><td class="pass">Pass</td><td>Unknown user should be denied</td></tr>
+        <tr><td>TS_Pat_006</td><td>View patient dashboard after login</td><td class="pass">Pass</td><td>Successful login should redirect correctly</td></tr>
+        <tr><td>TS_Pat_015</td><td>View Fees Section</td><td class="pass">Pass</td><td>Access should be available to logged-in patient</td></tr>
+        <tr><td>TS_Pat_016</td><td>Submit Valid Fee Payment</td><td class="pass">Pass</td><td>Valid payment should be accepted</td></tr>
+        <tr><td>TS_Pat_017</td><td>Payment with Zero Amount</td><td class="pass">Pass</td><td>Zero amount should be rejected</td></tr>
+        <tr><td>TS_Pat_018</td><td>Payment with Blank Description</td><td class="pass">Pass</td><td>Validation should block submission</td></tr>
+        <tr><td>TS_Pat_019</td><td>Negative Amount Validation</td><td class="pass">Pass</td><td>Negative input should be rejected</td></tr>
+        <tr><td>TS_Pat_020</td><td>Decimal Amount Validation</td><td class="pass">Pass</td><td>Decimal values should be handled correctly</td></tr>
+        <tr><td>TS_Pat_021</td><td>Claim Creation After Payment</td><td class="pass">Pass</td><td>Payment should create a claim</td></tr>
+        <tr><td>TS_Pat_022</td><td>Fee Record Display</td><td class="pass">Pass</td><td>History should show payment</td></tr>
+        <tr><td>TS_Pat_023</td><td>Duplicate Payment Submission</td><td class="pass">Pass</td><td>Duplicate should be prevented or managed</td></tr>
+        <tr><td>TS_Pat_024</td><td>Claim Status After Payment</td><td class="pass">Pass</td><td>Status should update correctly</td></tr>
+        <tr><td>TS_Pat_025</td><td>Admin Claim Approval</td><td class="pass">Pass</td><td>Admin approval flow should work</td></tr>
+        <tr><td>TS_Pat_026</td><td>Admin Claim Rejection</td><td class="pass">Pass</td><td>Rejection flow should work</td></tr>
+        <tr><td>TS_Pat_027</td><td>Payment Without Login</td><td class="pass">Pass</td><td>Unauthorized access should be blocked</td></tr>
+        <tr><td>TS_Pat_028</td><td>Currency Formatting</td><td class="pass">Pass</td><td>Amount should display in correct format</td></tr>
+        <tr><td>TS_Pat_029</td><td>Schedule appointment with valid doctor and slot</td><td class="pass">Pass</td><td>Valid booking should succeed</td></tr>
+        <tr><td>TS_Pat_030</td><td>Schedule appointment without selecting doctor</td><td class="pass">Pass</td><td>Required field validation</td></tr>
+        <tr><td>TS_Pat_031</td><td>Schedule appointment without date</td><td class="pass">Pass</td><td>Required field validation</td></tr>
+        <tr><td>TS_Pat_032</td><td>Schedule appointment without time</td><td class="pass">Pass</td><td>Required field validation</td></tr>
+        <tr><td>TS_Pat_033</td><td>Schedule appointment with past date</td><td class="pass">Pass</td><td>Past date should be rejected</td></tr>
+        <tr><td>TS_Pat_034</td><td>Schedule appointment with valid future date</td><td class="pass">Pass</td><td>Future booking should succeed</td></tr>
+        <tr><td>TS_Pat_035</td><td>Cancel scheduled appointment</td><td class="pass">Pass</td><td>Cancellation should be supported</td></tr>
+        <tr><td>TS_Pat_036</td><td>Schedule appointment without login</td><td class="pass">Pass</td><td>Unauthorized flow should be blocked</td></tr>
+        <tr><td>TS_Pat_037</td><td>Book multiple appointments for same patient</td><td class="pass">Pass</td><td>Multiple valid bookings should be allowed</td></tr>
+        <tr><td>TS_Pat_038</td><td>View scheduled appointments list</td><td class="pass">Pass</td><td>Appointment list should display correctly</td></tr>
+        <tr><td>TS_Pat_039</td><td>Schedule appointment when doctor unavailable</td><td class="pass">Pass</td><td>Unavailable slot should be rejected</td></tr>
+        <tr><td>TS_Pat_040</td><td>Schedule appointment for holiday / closed day</td><td class="pass">Pass</td><td>Non-working day should be blocked</td></tr>
+        <tr><td>TS_Pat_041</td><td>Duplicate time slot for same doctor</td><td class="pass">Pass</td><td>Duplicate slot should be blocked</td></tr>
+        <tr><td>TS_Pat_042</td><td>Schedule appointment with special appointment type</td><td class="pass">Pass</td><td>Special type should be accepted</td></tr>
+        <tr><td>TS_Pat_043</td><td>Schedule appointment with invalid time format</td><td class="pass">Pass</td><td>Malformed input should be rejected</td></tr>
+        <tr><td>TS_Pat_044</td><td>Maximum booking limit reached</td><td class="pass">Pass</td><td>Capacity rule should block booking</td></tr>
+        <tr><td>TS_Pat_045</td><td>Past time on current date</td><td class="pass">Pass</td><td>Same-day past time should be rejected</td></tr>
+        <tr><td>TS_Pat_046</td><td>Schedule appointment after logout</td><td class="pass">Pass</td><td>Session expiry should redirect to login</td></tr>
+        <tr><td>TS_Pat_047</td><td>Cancel appointment after successful scheduling</td><td class="pass">Pass</td><td>Cancel flow should work</td></tr>
+        <tr><td>TS_Pat_048</td><td>Schedule appointment from patient dashboard</td><td class="pass">Pass</td><td>Dashboard flow should work</td></tr>
+        <tr><td>TS_Pat_049</td><td>Whitespace-only required inputs</td><td class="pass">Pass</td><td>Input trimming should reject invalid entries</td></tr>
+        <tr><td>TS_Pat_050</td><td>Valid booking after invalid attempt</td><td class="pass">Pass</td><td>Retry should recover after validation error</td></tr>
+      </tbody>
+    </table>
+
+    <div class="note">
+      This summary reflects the expected QA outcome derived from the defined requirements and test cases. For live execution, replace the status values with actual observed results: Pass, Fail, Blocked, or Not Executed.
+    </div>
+
+    <a class="download-btn" href="data:text/html;charset=utf-8," download="NexusPulse_Test_Report.html" onclick="this.href='data:text/html;charset=utf-8,' + encodeURIComponent(document.documentElement.outerHTML)">Download Report</a>
+  </div>
+</body>
+</html>

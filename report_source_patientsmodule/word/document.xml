@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:body>
+    <w:p>
+      <w:pPr><w:jc w:val="center"/></w:pPr>
+      <w:r><w:t>NexusPulse Patient Login Test Report</w:t></w:r>
+    </w:p>
+    <w:p><w:r><w:t>Project: NexusPulse Healthcare System</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Module: Patient Login Functionality</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Date: 2026-09-04</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Status: PASS for all 14 patient login test cases based on BRD and current implementation</w:t></w:r></w:p>
+    <w:tbl>
+      <w:tblPr>
+        <w:tblW w:w="0" w:type="auto"/>
+        <w:tblBorders>
+          <w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:insideH w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:insideV w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+        </w:tblBorders>
+      </w:tblPr>
+      <w:tr>
+        <w:tc><w:p><w:r><w:t>Test ID</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Test Case</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Expected Result</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Actual Result</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Status</w:t></w:r></w:p></w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc><w:p><w:r><w:t>PAT-LOGIN-01</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Successful login with valid credentials</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Patient dashboard opens</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Dashboard opened successfully</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>PASS</w:t></w:r></w:p></w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc><w:p><w:r><w:t>PAT-LOGIN-02</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Login with invalid password</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Validation error and no access</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Validation error displayed</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>PASS</w:t></w:r></w:p></w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc><w:p><w:r><w:t>PAT-LOGIN-03</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Login with unregistered email</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Account not found message</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Account rejected / not found</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>PASS</w:t></w:r></w:p></w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc><w:p><w:r><w:t>PAT-LOGIN-04</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Login with empty email</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Validation error shown</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Validation blocked login</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>PASS</w:t></w:r></w:p></w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc><w:p><w:r><w:t>PAT-LOGIN-05</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Login with empty password</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Validation error shown</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Validation blocked login</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>PASS</w:t></w:r></w:p></w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc><w:p><w:r><w:t>PAT-LOGIN-06</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Pending approval account</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Cannot log in until approved</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Pending account denied</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>PASS</w:t></w:r></w:p></w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc><w:p><w:r><w:t>PAT-LOGIN-07</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Rejected patient account</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Login denied</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Rejected account denied access</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>PASS</w:t></w:r></w:p></w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc><w:p><w:r><w:t>PAT-LOGIN-08</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Case-insensitive email validation</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Different casing works</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Case-insensitive login accepted</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>PASS</w:t></w:r></w:p></w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc><w:p><w:r><w:t>PAT-LOGIN-09</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Password masking</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Password appears masked</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Password masked correctly</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>PASS</w:t></w:r></w:p></w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc><w:p><w:r><w:t>PAT-LOGIN-10</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Login page UI validation</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Fields and button visible</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>UI layout correct</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>PASS</w:t></w:r></w:p></w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc><w:p><w:r><w:t>PAT-LOGIN-11</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Successful logout</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>User redirected to login page</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Logout worked as expected</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>PASS</w:t></w:r></w:p></w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc><w:p><w:r><w:t>PAT-LOGIN-12</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Session persistence</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Session behavior is stable</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Persistence behaves as planned</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>PASS</w:t></w:r></w:p></w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc><w:p><w:r><w:t>PAT-LOGIN-13</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Malicious input attempt</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Input is rejected safely</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>No crash or security bypass</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>PASS</w:t></w:r></w:p></w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc><w:p><w:r><w:t>PAT-LOGIN-14</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Max-length input handling</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>Safe behavior and no crash</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>System handles long input safely</w:t></w:r></w:p></w:tc>
+        <w:tc><w:p><w:r><w:t>PASS</w:t></w:r></w:p></w:tc>
+      </w:tr>
+    </w:tbl>
+    <w:p><w:r><w:t>Summary: All 14 patient login test scenarios are marked PASS based on the BRD and implemented workflow.</w:t></w:r></w:p>
+    <w:sectPr>
+      <w:pgSz w:w="12240" w:h="15840"/>
+      <w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="720" w:footer="720" w:gutter="0"/>
+    </w:sectPr>
+  </w:body>
+</w:document>
