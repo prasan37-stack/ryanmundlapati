@@ -5,8 +5,8 @@ from playwright.sync_api import sync_playwright
 
 
 BASE_URL = os.environ.get("NEXUSPULSE_PATIENT_URL", "http://82.197.92.72:8080/patient/login")
-USERNAME = os.environ["NEXUSPULSE_PATIENT_USERNAME"]
-PASSWORD = os.environ["NEXUSPULSE_PATIENT_PASSWORD"]
+USERNAME = os.environ.get("NEXUSPULSE_PATIENT_USERNAME", "patient1")
+PASSWORD = os.environ.get("NEXUSPULSE_PATIENT_PASSWORD", "Mmp@2025!Patient#93")
 
 
 class PatientHomepageTests(unittest.TestCase):
