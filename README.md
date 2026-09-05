@@ -1,53 +1,36 @@
-# Simple Calculator Selenium Script
+# NexusPulse Healthcare Project
 
-This repository contains a simple Selenium script that opens an online calculator page and performs a calculation.
+This prototype implements the business requirements documented in the NexusPulse BRD, including:
 
-## Python Script
+- Patient registration and login
+- Appointment booking and cancellation
+- Patient profile management
+- Fee payment and claim submission
+- Messaging between patients and admin
+- Admin approval and rejection of patients
+- Admin claim approval, report uploads, and patient oversight
+- Doctor dashboard for appointment and patient history review
 
-```python
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-import time
+## Run locally
 
-# Optional: run Chrome headless
-options = webdriver.ChromeOptions()
-# options.add_argument("--headless")
+From the project folder:
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-
-try:
-    driver.get("https://www.online-calculator.com/full-screen-calculator/")
-    time.sleep(3)
-
-    iframe = driver.find_element(By.CSS_SELECTOR, "iframe")
-    driver.switch_to.frame(iframe)
-
-    driver.find_element(By.TAG_NAME, "body").send_keys("7+3=")
-    time.sleep(1)
-
-    print("Calculation completed: 7 + 3")
-finally:
-    driver.quit()
+```bash
+python -m http.server 8000
 ```
 
-## Usage
+Then open:
 
-1. Install dependencies:
-   ```bash
-   pip install selenium webdriver-manager
-   ```
-2. Run the script:
-   ```bash
-   python simple_calculator_selenium.py
-   ```
+```text
+http://localhost:8000
+```
 
-## Google AI Professional Certificate
+## Demo credentials
 
-- **Certificate**: Google AI Professional Certificate
-- **Completed**: May 2026
-- **Credential URL**: [View Certificate](https://www.coursera.org/my-learning?myLearningTab=CERTIFICATES)
-- **Skills**: AI fundamentals, machine learning, TensorFlow, and model deployment.
+- Admin: admin@nexuspulse.com / admin123
+- Doctor: doctor@nexuspulse.com / doctor123
+- Patient: aisha@nexuspulse.com / patient123
 
-If you want to use this with a different calculator page, update the URL and element locators accordingly.
+## Notes
+
+This is a front-end prototype using browser local storage to simulate a healthcare portal workflow without a backend service.
